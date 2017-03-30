@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_weather_activty"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context="com.example.administrator.coolweather.WeatherActivty">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/background"
+        android:scaleType="centerCrop"/>
+<ScrollView
+    android:id="@+id/scroll"
+    android:overScrollMode="never"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none">
+    <LinearLayout
+        android:fitsSystemWindows="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <include layout="@layout/weathertitlex"></include>
+        <include layout="@layout/now"></include>
+        <include layout="@layout/forecast"></include>
+        <include layout="@layout/aqi"></include>
+        <include layout="@layout/suggestion"></include>
+    </LinearLayout>
+
+</ScrollView>
+</FrameLayout>
