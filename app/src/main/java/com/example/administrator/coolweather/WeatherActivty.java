@@ -205,7 +205,7 @@ public class WeatherActivty extends AppCompatActivity {
     private void showWeatherinfo(Weather weather) {
         String city = weather.basic.city;
         String updatetime = weather.basic.update.updatetime;
-        String tmp = weather.now.tmp;
+        String tmp = weather.now.tmp ;
         String txt = weather.now.more.txt;//多云
         String comfort1 = "舒适度：  " + weather.suggestion.comfort.txt;//舒适度
         String carwash = "洗车建议：  " + weather.suggestion.carwash.txt;//洗车

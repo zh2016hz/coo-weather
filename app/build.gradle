@@ -11,10 +11,27 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+    signingConfigs{
+        config{
+            storeFile file('/Users/aa/Desktop/gradleyuhanweather.jks')
+            storePassword   '12345678'
+            keyAlias    'zhouyuhan'
+            keyPassword '12345678'
+        }
+    }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+    }
+    productFlavors{
+        qihoo{
+            applicationId "com.coolweather.android.qihoo"
+        }
+        baidu{
+            applicationId "com.coolweather.android.baidu"
         }
     }
 }
